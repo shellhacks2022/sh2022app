@@ -1,18 +1,25 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
+import TransactionTableElement from './TransactionTableElement';
 
-function TransactionTable() {
+function TransactionTable({transactionList}) {
   return (
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>ID</th>
+          <th>Detail</th>   
+          <th>Billed at</th>
+          <th>Cost</th>
         </tr>
       </thead>
       <tbody>
+        {transactionList?.map((e) => {
+            console.log(e);
+            return (
+                <TransactionTableElement data={e}/>
+            )
+        })}
         <tr>
           <td>1</td>
           <td>Mark</td>

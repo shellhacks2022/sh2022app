@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap'
 import React from 'react'
 
 import './LandingPage.css'
@@ -8,6 +9,7 @@ function LandingPage() {
         <div className="content-center">
             <h1 className='title'>Falsebill</h1>
             <p className='slogan'>Stop using truebill this is better</p>
+            <Button>Get started!</Button>
         </div>
     </div>
   )

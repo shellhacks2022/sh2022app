@@ -2,6 +2,11 @@ import React from 'react'
 import TransactionTable from '../TransactionTable/TransactionTable'
 
 function SummaryPage() {
+    const transactionList = [
+        {id: 3,
+        cost: 30,
+        name: "hola",
+        createdAt: '10-5-5'}]
   return (
     <div>
         <div className="content">
@@ -9,7 +14,7 @@ function SummaryPage() {
                 <h1>Summary</h1>
             </div>
 
-            <TransactionTable/>
+            <TransactionTable transactionList={transactionList}/>
         </div>
     </div>
   )
