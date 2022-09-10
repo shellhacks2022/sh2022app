@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="lg">
       <Container>
         <Navbar.Brand><Link to={'/'}>Falsebill</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
