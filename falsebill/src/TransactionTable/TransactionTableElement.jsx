@@ -1,13 +1,23 @@
 import React from 'react'
 
-function TransactionTableElement({data}) {
+import './TransactionTable.css';
+
+function TransactionTableElement({data, handleOnRemove, calculateBudget}) {
     // console.log(data.data);
+  const [isDeleted, setIsDeleted] = React.useState(false);
+
+    const handleOnDelete = () => {
+      setIsDeleted(true);
+      handleOnRemove(data.id);
+      calculateBudget();
+  }
+
   return (
-    <tr>
-        <td>{data?.id}</td>
+    <tr className={isDeleted ? 'hidden' : ''}>
         <td>{data?.name}</td>
         <td>{data?.createdAt}</td>
-        <td>{data?.cost}</td>
+        <td>${data?.cost.toFixed(2)}</td>
+        <td><span className="table-highlight" onClick={handleOnDelete}>Delete</span></td>
     </tr>
   )
 }

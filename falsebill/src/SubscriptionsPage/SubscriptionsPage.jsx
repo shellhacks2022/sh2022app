@@ -1,7 +1,9 @@
 import React from 'react'
+import {Navigate} from 'react-router-dom';
 
-function SubscriptionsPage() {
-  return (
+function SubscriptionsPage({accessToken}) {
+  
+    return (
     <div className='subscriptions-page'>
         <div className="content">
             <div className="heading">
